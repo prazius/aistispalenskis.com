@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                Aistis Palenskis
+            </header>
+            <div class="selector-container">
+                <ul class="selector-items">
+                    <li class="si1"><a href="#">CV</a></li>
+                    <li class="si2"><a href="#">Works</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <input type="text" id="liveInput" placeholder="enter your name or any sentence" maxlength="64">
+                <canvas id="canvas_square" width="300" height="300"></canvas>
+                <script type "text/javascript" src="canvas.js"></script>
+
+            </div>
+        </div>
+    </body>
+<script>
+    const reload = new EventSource("/__reload");
+
+    reload.onmessage = () => {
+        location.reload();
+    };
+</script>
+</html>
+
+
