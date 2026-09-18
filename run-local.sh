@@ -13,6 +13,6 @@ cleanup() {
 trap cleanup INT TERM
 
 sleep 1
-xdg-open http://127.0.0.1:8000
+setsid -f xdg-open http://127.0.0.1:8000 >/dev/null 2>&1
 
 wait "$SERVER_PID"
