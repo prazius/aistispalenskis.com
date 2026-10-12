@@ -91,7 +91,7 @@ input:focus {
 
 canvas#canvas_square
 {
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     image-rendering: auto;
 }
 
