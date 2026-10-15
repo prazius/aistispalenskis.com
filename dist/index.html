@@ -2,12 +2,14 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class="container">
             <header>
-                Aistis Palenskis
+                <div class="myName">Aistis Palenskis</div>
+                <div class="myJob">Software Engineer, Web Developer, Game Developer.</div>
             </header>
             <div class="tab-buttons">
 
@@ -20,7 +22,11 @@
 
                 <!-- home tab -->
                 <div class="tab-content tab-content-active" data-tab="home">
-                    <input type="text" id="liveInput" placeholder="start typing anything and i'll draw a face" maxlength="43">
+                    <div class="unicodeRow">
+                        <span class="keys">⌨ </span>
+                        <span class="to-face">↪  ツ</span>
+                    </div>
+                    <input type="text" id="liveInput" placeholder="type your name to see your face" maxlength="43">
                     <canvas id="canvas_square" width="300" height="300"></canvas>
                     <script type "text/javascript" src="canvas.js"></script>
                 </div>

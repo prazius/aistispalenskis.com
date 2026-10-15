@@ -22,13 +22,26 @@ body {
 
 header {
     grid-area: header;
-    border: 2px solid orange;
-    padding:30px;
+    border: 1px solid orange;
+    padding:15px;
     margin: 5px;
-    border-radius: 5px;
 }
 
-.content, header {
+.myName {
+    font-size: 2em;
+    font-weight:900;
+    color: orange;
+}
+.keys {
+    font-size: 3em;
+    color: cornflowerblue;
+}
+.to-face {
+    font-size:1.5em;
+    color: #00b1d9;
+}
+
+.content {
     padding: 30px;
     margin: 5px;
     border-radius: 5px;
@@ -85,17 +98,25 @@ header {
     display:none;
 }
 
+.unicodeRow {
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    gap:0.5rem;
+}
+
 .tab-content-active {
     display:flex;
 }
 
-input {
-    min-width: 370px;
+#liveInput {
+    width: 370px;
     border: none;
-    box-shadow: 0px 1px cornflowerblue;
+    box-shadow: 1px 1px cornflowerblue;
+    text-align: center;
 }
 
-input:focus {
+#liveInput:focus {
     outline: none;
 }
 
