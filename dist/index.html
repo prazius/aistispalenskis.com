@@ -9,27 +9,42 @@
             <header>
                 Aistis Palenskis
             </header>
-            <div class="selector-container">
-                <ul class="selector-items">
-                    <li class="si1"><a href="#">CV</a></li>
-                    <li class="si2"><a href="#">Works</a></li>
-                </ul>
+            <div class="tab-buttons">
+
+                <button class="tab-btn tab-btn-active" data-for-tab="home">Home</button>
+                <button class="tab-btn" data-for-tab="cv">CV</button>
+                <button class="tab-btn" data-for-tab="things">Things I've Built</button>
+
             </div>
             <div class="content">
-                <input type="text" id="liveInput" placeholder="enter your name or any sentence" maxlength="64">
-                <canvas id="canvas_square" width="300" height="300"></canvas>
-                <script type "text/javascript" src="canvas.js"></script>
 
+                <!-- home tab -->
+                <div class="tab-content tab-content-active" data-tab="home">
+                    <input type="text" id="liveInput" placeholder="start typing anything and i'll draw a face" maxlength="43">
+                    <canvas id="canvas_square" width="300" height="300"></canvas>
+                    <script type "text/javascript" src="canvas.js"></script>
+                </div>
+
+                <!-- CV tab -->
+                <div class="tab-content" data-tab="cv">
+                    Here goes my cv
+                </div>
+
+                <!-- Things tab -->
+                <div class="tab-content" data-tab="things">
+                    Here go all the things I've built
+                </div>
             </div>
         </div>
     </body>
-<script>
-    const reload = new EventSource("/__reload");
+    <script src=setupTabs.js></script>
+    <script>
+        const reload = new EventSource("/__reload");
 
-    reload.onmessage = () => {
-        location.reload();
-    };
-</script>
+        reload.onmessage = () => {
+            location.reload();
+        };
+    </script>
 </html>
 
 
